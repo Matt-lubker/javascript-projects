@@ -1,0 +1,58 @@
+body{
+background-color: black;
+max-width: 400px;
+margin: 100px auto;
+}
+h1{
+    color: lightgreen;
+    font-size:  40px;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+input{
+    height: 40px;
+    color: #fff;
+    border: 2px solid lightgreen;
+    background-color: #333;
+    width: 73%;
+    
+    outline: none;
+}
+button{
+    height: 46px;
+    color: black;
+    border: none;
+    background-color: lightgreen;
+    cursor: pointer;
+    transition: 0.5s;
+    width: 90px;
+}
+button:hover {
+    background-color: darkgreen;
+
+}
+button:active{
+    background-color: white;
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+
+}
+li{
+    background-color: lightgreen;
+    padding: 7px;
+    margin: 5px auto;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+span{
+    cursor: pointer;    
+}
