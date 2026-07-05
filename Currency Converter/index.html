@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.css">
     <title>Document</title>
 </head>
 
@@ -35,33 +36,48 @@
                     </select>
                 </div>
             </div>
- 
-            
-                        <div class="Currancy-row">
+
+
+            <div class="Currancy-row">
 
                 <div class="currency-input">
-                    <label for="amount">value</label>
-                    <input type="number" id="amount" placeholder="Enter amount" step="0.1" min="0" required>
+                    <label for="covertedAmount">value</label>
+                    <input type="text" id="covertedAmount" placeholder="Converted amount" step="0.1" min="0" required>
 
                 </div>
 
                 <div class="currancy-select">
-                    <label for="fromCurrency">From</label>
-                    <select id="fromCurrency" required>
-                        <option value="USD" selected>USD</option>
+                    <label for="toCurrency">To</label>
+                    <select id="toCurrency" required>
+                        <option value="USD">USD</option>
                         <option value="EUR">EUR</option>
                         <option value="GBP">GBP</option>
-                        <option value="JPY">JPY</option>
+                        <option value="JPY" selected>JPY</option>
                         <option value="BRL">BRL</option>
 
                     </select>
                 </div>
             </div>
 
-
-
+            <button type="submit" class="convert-btn" id="convertBtn">
+                💵 convert currency
+            </button>
 
         </form>
+
+        <div class="loading">
+            <div class="spinner"></div>
+            <p>currency...</p>
+        </div>
+
+        <div class="result"></div>
+ 
+        <div class="info">
+            <p>
+                Tax update in real time
+            </p>
+        </div>
+
 
     </div>
 </body>
