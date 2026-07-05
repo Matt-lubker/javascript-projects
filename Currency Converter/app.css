@@ -8,13 +8,13 @@
 body {
     font-family: serif;
 
- background-image: linear-gradient(to right, #00ff10, #65ff00, #8eff00, #aeff00, #c9ff00, #c9ff00, #c9ff00, #c9ff00, #aeff00, #8eff00, #64ff00, #00ff17);
+    background-image: linear-gradient(to right, #00ff10, #65ff00, #8eff00, #aeff00, #c9ff00, #c9ff00, #c9ff00, #c9ff00, #aeff00, #8eff00, #64ff00, #00ff17);
 
-min-height: 100vh;
-display: flex;
-align-items: center;
-justify-content: center;
-padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 
 }
 
@@ -27,8 +27,67 @@ padding: 20px;
     max-width: 500px;
     text-align: center;
 }
+
 h1 {
     font-size: 1.8rem;
     margin-bottom: 30px;
     color: #333;
+}
+
+.convert-form {
+    display: flex;
+    align-items: end;
+    gap: 15px;
+}
+
+.currency-row {
+    display: flex;
+    gap: 15px;
+    align-items: end;
+}
+
+.currency-input {
+    flex: 2;
+
+}
+
+.currency-select {
+    flex: 1;
+}
+
+input,select {
+
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #d5d5d5;
+    background: #f8f9fa;
+    border-radius: 12px;
+    font-size: 16px;
+}
+
+
+.video {
+    
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+.video video {
+    
+    min-width: 100%;
+    min-height: 100%;
+    position: fixed;
+    top: 0;
+
+}
+
+.mask {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 45%, rgba(10, 12, 16, 0.99) 60%);
+
 }

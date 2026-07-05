@@ -10,13 +10,18 @@
 
 <body>
 
+        <div class="video">
+        <video src="money.mp4" loop muted autoplay></video>
+        <div class="mask"></div>
+    </div>
+
     <div class="container">
 
         <h1>Currency Converter</h1>
 
         <form class="Converter-form" id="converterForm">
 
-            <div class="Currancy-row">
+            <div class="currency-row">
 
                 <div class="currency-input">
                     <label for="amount">value</label>
@@ -24,7 +29,7 @@
 
                 </div>
 
-                <div class="currancy-select">
+                <div class="currency-select">
                     <label for="fromCurrency">From</label>
                     <select id="fromCurrency" required>
                         <option value="USD" selected>USD</option>
@@ -38,7 +43,7 @@
             </div>
 
 
-            <div class="Currancy-row">
+            <div class="currency-row">
 
                 <div class="currency-input">
                     <label for="covertedAmount">value</label>
@@ -46,7 +51,7 @@
 
                 </div>
 
-                <div class="currancy-select">
+                <div class="currency-select">
                     <label for="toCurrency">To</label>
                     <select id="toCurrency" required>
                         <option value="USD">USD</option>
@@ -59,12 +64,14 @@
                 </div>
             </div>
 
-            <button type="submit" class="convert-btn" id="convertBtn">
-                💵 convert currency
-            </button>
+
 
         </form>
 
+     <button type="submit" class="convert-btn" id="convertBtn">
+                💵 convert currency
+            </button>
+       
         <div class="loading">
             <div class="spinner"></div>
             <p>currency...</p>
