@@ -1,8 +1,8 @@
 :root {
-    --light-color: #fff;
+    --light-color: #ffffff;
     --dark-color: #141e30;
     --dial-color: #f5f5f5;
-    --background-color: linear-gradient(135deg, #eeeeee, #aca7fd);
+    --background-color: linear-gradient(135deg, #ffffff, #333333);
 }
 
 * {
@@ -16,56 +16,147 @@
 body {
     height: 100vh;
     background: var(--background-color);
+    overflow: hidden;
+    transition: 0.5s;
 }
 
+/* Dark Mode */
 body.dark {
     --light-color: #292929;
     --dark-color: #f5f5f5;
-    --background-color: linear-gradient(135deg, #242526, #383838);
     --dial-color: #1e1f20;
+    --background-color: linear-gradient(135deg, #242526, #383838);
 }
 
+/* Dark Mode Button */
 .mode-switch {
-    cursor: pointer;
-    font-size: 2rem;
-    padding: 10px 20px;
-    border: 8px solid;
-    font-weight: 400;
-    display: inline-block;
-    color: var(--light-color);
-    background: var(--dark-color);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    top: 30px;
+    position: fixed;
+    top: 20px;
     left: 50%;
-    transform: translate(-50%, 150%);
-    transition: 0.5s;
+    transform: translateX(-50%);
+
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+
+    background: var(--dark-color);
+    color: var(--light-color);
+
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
 }
 
+.mode-switch:hover {
+    transform: translateX(-50%) scale(1.05);
+}
+
+/* Clock Container */
 .clock {
-    width: 900px;
+    width: min(900px, 95%);
     height: 250px;
+
     position: absolute;
-    transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+    transform: translate(-50%, -50%);
 
-.clock div {
-    background: var(--dial-color);
-    position: relative;
-    height: 100%;
-    width: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 8rem;
+}
+
+/* Time Boxes */
+.clock div {
+    width: 180px;
+    height: 180px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--dial-color);
     color: var(--dark-color);
-    border-radius: 5px;
+
+    font-size: 5rem;
+    border-radius: 10px;
+
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-    letter-spacing: 3px;
+
     transition: 0.5s;
+}
+
+/* Colon */
+.clock span {
+    margin: 0 15px;
+    font-size: 5rem;
+    font-weight: bold;
+    color: var(--dark-color);
+}
+
+/* AM/PM */
+#ampm {
+    width: 120px;
+    height: 120px;
+    margin-left: 20px;
+    font-size: 2.2rem;
+}
+
+/* Date */
+#date {
+    position: absolute;
+    top: 72%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background: var(--dial-color);
+    color: var(--dark-color);
+
+    padding: 15px 40px;
+
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+
+    font-size: 2rem;
+    letter-spacing: 2px;
+
+    transition: 0.5s;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+
+    .clock {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 10px;
+        height: auto;
+    }
+
+    .clock div {
+        width: 120px;
+        height: 120px;
+        font-size: 3rem;
+    }
+
+    .clock span {
+        font-size: 3rem;
+    }
+
+    #ampm {
+        width: 90px;
+        height: 90px;
+        font-size: 1.5rem;
+    }
+
+    #date {
+        top: 82%;
+        font-size: 1.2rem;
+        padding: 10px 20px;
+    }
+
+    .mode-switch {
+        font-size: 1rem;
+    }
 }
