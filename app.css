@@ -1,0 +1,71 @@
+:root {
+    --light-color: #fff;
+    --dark-color: #141e30;
+    --dial-color: #f5f5f5;
+    --background-color: linear-gradient(135deg, #eeeeee, #aca7fd);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Xiaowei, sans-serif;
+    font-weight: 600;
+}
+
+body {
+    height: 100vh;
+    background: var(--background-color);
+}
+
+body.dark {
+    --light-color: #292929;
+    --dark-color: #f5f5f5;
+    --background-color: linear-gradient(135deg, #242526, #383838);
+    --dial-color: #1e1f20;
+}
+
+.mode-switch {
+    cursor: pointer;
+    font-size: 2rem;
+    padding: 10px 20px;
+    border: 8px solid;
+    font-weight: 400;
+    display: inline-block;
+    color: var(--light-color);
+    background: var(--dark-color);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%, 150%);
+    transition: 0.5s;
+}
+
+.clock {
+    width: 900px;
+    height: 250px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.clock div {
+    background: var(--dial-color);
+    position: relative;
+    height: 100%;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8rem;
+    color: var(--dark-color);
+    border-radius: 5px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    letter-spacing: 3px;
+    transition: 0.5s;
+}
