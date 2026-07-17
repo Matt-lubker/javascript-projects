@@ -1,0 +1,300 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family: sans-serif;
+
+    font-size: 1rem;
+
+    background-color: rgb(174, 174, 174);
+
+}
+
+
+header {
+
+    background-color: white;
+
+}
+
+
+
+button {
+
+    padding: 8px;
+
+    outline: none;
+
+    cursor: pointer;
+
+    border: 1px solid rgb(92, 92, 92);
+
+    border-radius: 5px;
+
+    background-color: whitesmoke;
+
+}
+
+
+button:hover {
+
+    background-color: rgb(66, 66, 66);
+
+    color: white;
+
+}
+
+
+
+.container {
+
+    width: 95%;
+
+    margin: auto;
+
+}
+
+
+
+.nav {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    width: 100%;
+
+    margin: auto;
+
+    padding: 20px 0;
+
+    background-color: white;
+
+}
+
+
+
+.nav button {
+
+    font-family: sans-serif;
+
+}
+
+
+
+/* CREATE BOX */
+
+.create-box {
+
+    width: 380px;
+
+    margin: auto;
+
+    padding: 20px;
+
+    margin-top: 10px;
+
+    border-radius: 5px;
+
+    background-color: whitesmoke;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+
+
+.create-box textarea {
+
+    width: 100%;
+
+    border-radius: 5px;
+
+    padding: 10px;
+
+    font-family: sans-serif;
+
+    border: 1px solid lightcyan;
+
+}
+
+
+
+/* FLASHCARDS */
+
+.flashcards {
+
+    display: flex;
+
+    justify-content: flex-start;
+
+    align-items: flex-start;
+
+    flex-wrap: wrap;
+
+    width: 100%;
+
+    margin: auto;
+
+    margin-top: 10px;
+
+    padding: 0 10px;
+
+}
+
+
+
+.flashcard {
+
+    width: 370px;
+
+    height: 200px;
+
+    word-wrap: break-word;
+
+    margin: 10px;
+
+    padding: 10px;
+
+    background-color: white;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+}
+
+
+
+.flashcard:hover {
+
+    box-shadow: 0 0 10px black;
+
+}
+
+
+
+.flashcard h2 {
+
+    font-size: 1rem;
+
+}
+
+
+
+/* DELETE SELECT CHECKBOX */
+
+.delete-check {
+
+    width: 35px;
+
+    height: 35px;
+
+    cursor: pointer;
+
+    margin: 15px;
+
+    appearance: none;
+
+    border: 3px solid red;
+
+    border-radius: 8px;
+
+    background-color: white;
+
+    position: relative;
+
+}
+
+
+
+.delete-check:hover {
+
+    transform: scale(1.1);
+
+}
+
+
+
+.delete-check:checked {
+
+    background-color: red;
+
+    border-color: darkred;
+
+}
+
+
+
+.delete-check:checked::after {
+
+    content: "✓";
+
+    color: white;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    position: absolute;
+
+    left: 5px;
+
+    top: -5px;
+
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:768px) {
+
+
+    .flashcard {
+
+        margin: auto;
+
+        margin-top: 10px;
+
+        margin-bottom: 10px;
+
+    }
+
+}
+
+
+
+@media(max-width:480px) {
+
+
+    .nav {
+
+        flex-direction: column;
+
+        align-items: center;
+
+    }
+
+
+    .create-box {
+
+        width: 100%;
+
+    }
+
+
+    .flashcard {
+
+        width: 100%;
+
+    }
+
+}
